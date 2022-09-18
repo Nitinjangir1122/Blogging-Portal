@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+:root {
+  --font_color: #333;
+  --primary: #fc6500;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------ Navbar Portion ----- */
+
+.blog_website_home {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      to right,
+      rgba(45, 45, 45, 0.541),
+      rgba(41, 41, 41, 0.6)
+    ),
+    url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.blog_navbar {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+.blog_navbar a {
+  text-decoration: none;
+}
+.blog_navbar a .logo {
+  font-size: 22px;
+  color: var(--font_color);
+}
+.blog_navbar .logo span {
+  color: var(--primary);
+}
+.blog_navbar .navbar_links {
+  display: flex;
+  align-items: center;
+}
+.blog_navbar .navbar_links a {
+  text-decoration: none;
+  color: var(--font_color);
+  font-weight: 500;
+  margin-left: 30px;
+  transition: all 0.3s ease;
+}
+.blog_navbar .navbar_links a:hover {
+  color: var(--primary);
+}
+
+.search-wrapper {
+  width: 250px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+  border: 2px solid rgba(51, 51, 51, 0.767);
+  border-radius: 20px;
+  position: relative;
+}
+.search-wrapper input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--font_color);
+  border-radius: 20px;
+}
+.search-wrapper .search-btn {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    border-radius: 20px;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-wrapper .search-btn i{
+  color: #fff;
+}
+.user-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.25rem;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 1px solid black;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.card > .header {
+  margin-bottom: 0.25rem;
+}
+
+.card > .body {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.hide {
+  display: none;
+}
+
+/* ------ Home Portion ----- */
+
+.blog_home {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 150px;
+}
+.blog_home h1 {
+  font-size: 46px;
+  text-align: center;
+  line-height: 55px;
+  color: #fff;
+}
+.blog_home p {
+  font-size: 18px;
+  margin: 12px 0 40px 0;
+  font-weight: 500;
+  color: #fff;
+}
+.sign_up {
+  padding: 15px 28px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary);
+  transition: all 0.4s ease;
+  border: 3px solid var(--primary);
+}
+.sign_up:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+/* ----- Blog Pages Section ----- */
+
+.blog_section {
+  width: 100%;
+  height: auto;
+  padding: 100px 12%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 100px;
+}
+.blog_section .blog_card img {
+  width: 100%;
+  height: 290px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #333;
+}
+.blog_section .blog_card h3 {
+  font-size: 18px;
+  color: var(--font_color);
+  margin: 5px 0;
+}
+.blog_section .blog_card > p {
+  opacity: 0.8;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.blog_card .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blog_section .blog_card a {
+  text-decoration: none;
+}
+/* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+/* Set a style for all buttons */
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+  opacity: 0.8;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+img.avatar {
+  width: 100px;
+  height: auto;
+  border-radius: 100%;
+}
+.container {
+  padding: 16px;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/* ---- Footer section Start ----  */
+
+.Footer_Section {
+  width: 100%;
+  height: auto;
+  padding: 60px 11% 110px;
+  background-color: #fc6500;
+  font-family: pop;
+  position: relative;
+}
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-gap: 50px;
+}
+.container h3 {
+  font-size: 18px;
+  margin-bottom: 28px;
+  position: relative;
+}
+.container h3::after {
+  content: " ";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 10px;
+  bottom: -6px;
+  left: 0;
+}
+.about > p {
+  font-size: 15px;
+  opacity: 0.8;
+  line-height: 26px;
+  max-width: 350px;
+  margin-bottom: 12px;
+}
+.about .social_links .uil {
+  font-size: 23px;
+  margin-right: 8px;
+  transition: all 0.7s ease;
+  cursor: pointer;
+}
+.social_links .uil:hover {
+  color: #fff;
+}
+.Quick_links .links {
+  display: flex;
+  flex-direction: column;
+}
+.links a {
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 5px;
+  font-size: 15px;
+  transition: all 0.7s ease;
+}
+.links a:hover {
+  color: #fff;
+}
+.Contact ul li {
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 17px;
+}
+ul li .uil {
+  font-size: 21px;
+  margin-right: 14px;
+}
+ul li p {
+  font-size: 15px;
+}
+.Footer_Section > p {
+  width: 100%;
+  position: absolute;
+  bottom: 27px;
+  left: 0;
+  text-align: center;
+  font-size: 17px;
+  opacity: 0.8;
+}
